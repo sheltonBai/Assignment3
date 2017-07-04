@@ -60,7 +60,16 @@ public class Breakout extends GraphicsProgram {
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
-		/* You fill this in, along with any subsidiary methods */
+		
+		//Creating the brick rows
+		for(){
+			
+		}
+		
+		
+		//Creating the paddle
+		GRect paddle = new GRect(0, PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
+		
 	}
 
 }
