@@ -73,7 +73,8 @@ public class Breakout extends GraphicsProgram {
 		
 		//Creating the ball
 		
-		GOval ball = new GOval(0, 0, BALL_RADIUS / 2, BALL_RADIUS / 2)
+		GOval ball = new GOval(0, 0, BALL_RADIUS / 2, BALL_RADIUS / 2);
+		add(ball);
 		
 		//Creating the paddle
 		GRect paddle = new GRect(0, PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
