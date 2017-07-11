@@ -94,6 +94,7 @@ public class Breakout extends GraphicsProgram {
 				ballX = ballX + ballXVel;
 			} else {
 				ballXVel = ballXVel * -1;
+				ballX += ballXVel * 2;
 			}
 			
 			if(ball.getX() < 0) {
@@ -104,6 +105,7 @@ public class Breakout extends GraphicsProgram {
 				ballY = ballY + ballYVel;
 			} else {
 				ballYVel = ballYVel * -1;
+				ballY += ballYVel * 2;
 			}
 			
 			if(ball.getY() < 0) {
