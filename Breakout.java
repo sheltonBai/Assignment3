@@ -61,7 +61,6 @@ public class Breakout extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 		
-		
 		//Creating the brick rows
 		for(int i = 0; i < NBRICK_ROWS; i ++){	
 			for(int x = 0; x < NBRICKS_PER_ROW; x ++){
@@ -76,12 +75,17 @@ public class Breakout extends GraphicsProgram {
 		GOval ball = new GOval(0, 0, BALL_RADIUS, BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball);
-		
-		
+				
 		//Creating the paddle
 		GRect paddle = new GRect(0, PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
 		add(paddle);
+		
+		
 	}
+	
+	private void moveBall() {
+		 ball.move(0, 0);
+	} 
 
 }
