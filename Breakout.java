@@ -96,6 +96,9 @@ public class Breakout extends GraphicsProgram {
 				ballX = ballX - 200;
 			}
 			
+			if(ball.getX() < 0) {
+				ballX = ballX + 200;
+			}
 			
 			if(ball.getY() < APPLICATION_HEIGHT) {
 				ballY++;
@@ -103,6 +106,9 @@ public class Breakout extends GraphicsProgram {
 				ballY = ballY - 200;
 			}
 			
+			if(ball.getY() < 0) {
+				ballY = ballY + 200;
+			}
 			
 			ball.move(ballX, ballY);
 			pause(100);
