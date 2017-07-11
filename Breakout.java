@@ -61,9 +61,13 @@ public class Breakout extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 		
+		
+		
+		//Creating a new Canvas
+		GCanvas screen = new GCanvas();
+		
 		//Creating the brick rows
-		for(int i = 0; i < NBRICK_ROWS; i ++){
-			
+		for(int i = 0; i < NBRICK_ROWS; i ++){	
 			for(int x = 0; x < NBRICKS_PER_ROW; x ++){
 				GRect brick = new GRect((BRICK_SEP * x) + (x * BRICK_WIDTH), BRICK_Y_OFFSET + (BRICK_SEP * i)+ i * BRICK_HEIGHT, BRICK_WIDTH, BRICK_HEIGHT);
 				brick.setFilled(false);
@@ -71,11 +75,12 @@ public class Breakout extends GraphicsProgram {
 			}
 		}
 		
-		//Creating the ball
 		
+		//Creating the ball
 		GOval ball = new GOval(0, 0, BALL_RADIUS, BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball);
+		
 		
 		//Creating the paddle
 		GRect paddle = new GRect(0, PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
