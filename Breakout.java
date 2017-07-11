@@ -57,6 +57,7 @@ public class Breakout extends GraphicsProgram {
 /** Number of turns */
 	private static final int NTURNS = 3;
 
+
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
@@ -73,6 +74,8 @@ public class Breakout extends GraphicsProgram {
 		
 		
 		//Creating the ball
+		int ballX = 0;
+		int ballY = 0;
 		GOval ball = new GOval(0, 0, BALL_RADIUS, BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball);
@@ -82,12 +85,14 @@ public class Breakout extends GraphicsProgram {
 		paddle.setFilled(true);
 		add(paddle);
 		
+		//Moving the Ball
+		while(true){
+			ballY++;
+			ballX++;
+			ball.move(ballX, ballY);
+		}
+		
 		
 	}
-	
-	private void moveBall() {
-		GOval ball = new GOval(0, 0, BALL_RADIUS, BALL_RADIUS);
-		ball.move(0, 0);
-	} 
 
 }
