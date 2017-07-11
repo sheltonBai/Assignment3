@@ -62,10 +62,6 @@ public class Breakout extends GraphicsProgram {
 	public void run() {
 		
 		
-		
-		//Creating a new Canvas
-		GCanvas screen = new GCanvas();
-		
 		//Creating the brick rows
 		for(int i = 0; i < NBRICK_ROWS; i ++){	
 			for(int x = 0; x < NBRICKS_PER_ROW; x ++){
