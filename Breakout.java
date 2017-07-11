@@ -90,16 +90,16 @@ public class Breakout extends GraphicsProgram {
 		//Moving the Ball
 		while(true){
 				
-			if(ball.getX() = APPLICATION_WIDTH) {
-				ballX++;
-			} else {
+			if(ball.getX() == APPLICATION_WIDTH) {
 				ballX = 0;
+			} else {
+				ballX++;
 			}
 			
-			if(ball.getY() = APPLICATION_HEIGHT) {
-				ballY++;
-			} else {
+			if(ball.getY() == APPLICATION_HEIGHT) {
 				ballY = 0;
+			} else {
+				ballY++;
 			}
 			
 			ball.move(ballX, ballY);
