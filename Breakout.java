@@ -76,6 +76,8 @@ public class Breakout extends GraphicsProgram {
 		//Creating the ball
 		int ballX = 0;
 		int ballY = 0;
+		int ballXDirect = 1;
+		int ballYDirect = 1;
 		GOval ball = new GOval(0, 0, BALL_RADIUS, BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball);
@@ -87,8 +89,19 @@ public class Breakout extends GraphicsProgram {
 		
 		//Moving the Ball
 		while(true){
-			ballY++;
-			ballX++;
+				
+			if(ball.getX() < APPLICATION_WIDTH) {
+				ballX++;
+			} else {
+				ballX = 0;
+			}
+			
+			if(ball.getY() < APPLICATION_HEIGHT) {
+				ballY++;
+			} else {
+				ballY = 0;
+			}
+			
 			ball.move(ballX, ballY);
 			pause(50);
 		}
