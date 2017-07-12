@@ -101,7 +101,7 @@ public class Breakout extends GraphicsProgram {
 				ballX = -2;
 			}
 			
-			if(ball.getY() > APPLICATION_WIDTH){
+			if(ball.getY() > APPLICATION_HEIGHT){
 				ballY = -2;
 			}
 
