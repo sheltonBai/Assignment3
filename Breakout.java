@@ -76,7 +76,7 @@ public class Breakout extends GraphicsProgram {
 		//Creating the ball
 		int ballX = 0;
 		int ballY = 0;
-		GOval ball = new GOval(APPLICATION_WIDTH / 2 - BALL_RADIUS / 2, APPLICATION_HEIGHT - (PADDLE_Y_OFFSET * 20), BALL_RADIUS, BALL_RADIUS);
+		GOval ball = new GOval(APPLICATION_WIDTH / 2 - BALL_RADIUS / 2, APPLICATION_HEIGHT - (PADDLE_Y_OFFSET * 15), BALL_RADIUS, BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball);
 		ballX = 2;
