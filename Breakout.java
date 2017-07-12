@@ -79,7 +79,8 @@ public class Breakout extends GraphicsProgram {
 		GOval ball = new GOval(0, 0, BALL_RADIUS, BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball);
-				
+		ballX = 2;
+		ballY = 2;
 		//Creating the paddle
 		GRect paddle = new GRect(APPLICATION_WIDTH / 2, PADDLE_Y_OFFSET, PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
@@ -90,13 +91,17 @@ public class Breakout extends GraphicsProgram {
 				
 			if(ball.getX() < APPLICATION_WIDTH) {
 				ballX = 2;
-			} else {
-				ballX = -2;
 			}
 
 			if(ball.getY() < APPLICATION_WIDTH) {
 				ballY = 2;
-			} else {
+			}
+			
+			if(ball.getX() > APPLICATION_WIDTH){
+				ballX = -2;
+			}
+			
+			if(ball.getY() > APPLICATION_WIDTH){
 				ballY = -2;
 			}
 
