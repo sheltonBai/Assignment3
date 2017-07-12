@@ -14,6 +14,7 @@ import acm.util.*;
 import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.event.*;
 
 public class Breakout extends GraphicsProgram {
 
@@ -113,11 +114,7 @@ public class Breakout extends GraphicsProgram {
 			pause(30);
 		}
 		
-		public void mouseMoved (MouseEvent e) {
-			
-			paddle.move(e.getX(), 0);
-			
-		}
+
 		
 	}
 
