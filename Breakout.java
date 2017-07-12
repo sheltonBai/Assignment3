@@ -61,7 +61,7 @@ public class Breakout extends GraphicsProgram {
 	private GRect paddle;
 	
 	public void mouseMoved(MouseEvent e) {
-		int moveAmount = APPLICATION_WIDTH - e.getX();
+		double moveAmount = paddle.getX() - e.getX();
 		paddle.move(moveAmount, 0);
 	}
 
