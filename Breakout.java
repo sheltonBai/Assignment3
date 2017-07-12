@@ -14,7 +14,7 @@ import acm.util.*;
 import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.event.*;
+
 
 public class Breakout extends GraphicsProgram {
 
@@ -58,6 +58,11 @@ public class Breakout extends GraphicsProgram {
 /** Number of turns */
 	private static final int NTURNS = 3;
 
+	private GRect paddle;
+	
+	public void mouseMoved(MouseEvent e) {
+		paddle.move(e.getX(), 0);
+	}
 
 /* Method: run() */
 /** Runs the Breakout program. */
@@ -84,13 +89,15 @@ public class Breakout extends GraphicsProgram {
 		ballY = 2;
 		
 		//Creating the paddle
-		GRect paddle = new GRect(APPLICATION_WIDTH / 2 - PADDLE_WIDTH / 2, APPLICATION_HEIGHT - (PADDLE_Y_OFFSET + PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT);
+		paddle = new GRect(APPLICATION_WIDTH / 2 - PADDLE_WIDTH / 2, APPLICATION_HEIGHT - (PADDLE_Y_OFFSET + PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
 		add(paddle);
 		
 		//Starting the game
 		waitForClick();
 		addMouseListeners();
+		
+
 		//Moving the Ball
 		while(true){
 				
@@ -113,6 +120,8 @@ public class Breakout extends GraphicsProgram {
 			ball.move(ballX, ballY);
 			pause(30);
 		}
+		
+
 		
 
 		
