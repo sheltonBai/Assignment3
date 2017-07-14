@@ -122,7 +122,7 @@ public class Breakout extends GraphicsProgram {
 				ballY = -2;
 			}
 			
-			if(ballBrick != paddle) {
+			if(ballBrick == paddle) {
 				ballY = ballY * -1;
 			} else {
 				ballY = ballY * -1;
