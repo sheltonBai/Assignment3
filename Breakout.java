@@ -67,7 +67,7 @@ public class Breakout extends GraphicsProgram {
 	
 	private GOval ball;
 	
-	GObject ballBrick = getElementAt(ball.getX(), ball.getY());
+	GObject ballBrick = getElementAt(ball.getX() + BALL_RADIUS / 2, ball.getY() + 1);
 	
 /* Method: run() */
 /** Runs the Breakout program. */
@@ -114,16 +114,19 @@ public class Breakout extends GraphicsProgram {
 				ballY = 2;
 			}
 			
-			if(ball.getX() > APPLICATION_WIDTH){
+			if(ball.getX() > APPLICATION_WIDTH) {
 				ballX = -2;
 			}
 			
-			if(ball.getY() > APPLICATION_HEIGHT){
+			if(ball.getY() > APPLICATION_HEIGHT) {
 				ballY = -2;
 			}
 			
-			if(ballBrick != null){
+			if(ballBrick != paddle) {
 				ballY = ballY * -1;
+			} else {
+				ballY = ballY * -1;
+				remove(ballBrick);
 			}
 			
 			ball.move(ballX, ballY);
