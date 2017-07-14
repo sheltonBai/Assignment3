@@ -142,7 +142,13 @@ public class Breakout extends GraphicsProgram {
 				}
 			
 				if(ballBrick == paddle) {
-					ballY = ballY * -1;
+					double ballAngle = Math.random();
+					if(ballAngle < 0.5) {
+						ballY = ballY * -1;
+					} else {
+						ballY = ballY * -1;
+						ballX = ballX * -1;
+					}
 				} else if(ballBrick != ball && ballBrick != null) {
 					ballY = ballY * -1;
 					remove(ballBrick);
