@@ -65,7 +65,7 @@ public class Breakout extends GraphicsProgram {
 		paddle.move(moveAmount, 0);
 	}
 	
-	private GOval ball;
+	private GOval ball = new GOval(APPLICATION_WIDTH / 2 - BALL_RADIUS / 2, APPLICATION_HEIGHT - (PADDLE_Y_OFFSET * 5), BALL_RADIUS, BALL_RADIUS);
 	
 	GObject ballBrick = getElementAt(ball.getX() + BALL_RADIUS / 2, ball.getY() + 1);
 	
@@ -87,7 +87,7 @@ public class Breakout extends GraphicsProgram {
 		//Creating the ball
 		int ballX = 0;
 		int ballY = 0;
-		ball = new GOval(APPLICATION_WIDTH / 2 - BALL_RADIUS / 2, APPLICATION_HEIGHT - (PADDLE_Y_OFFSET * 5), BALL_RADIUS, BALL_RADIUS);
+		
 		ball.setFilled(true);
 		add(ball);
 		ballX = 2;
