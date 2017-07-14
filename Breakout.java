@@ -56,7 +56,7 @@ public class Breakout extends GraphicsProgram {
 	private static final int BRICK_Y_OFFSET = 70;
 
 /** Number of turns */
-	private static final int NTURNS = 3;
+	private static int NTURNS = 3;
 
 	private GRect paddle;
 	
@@ -104,36 +104,38 @@ public class Breakout extends GraphicsProgram {
 		
 
 		//Moving the Ball
-		while(true){
+		while(NTURNS != 0) {
+			while(true) {
 				
-			if(ball.getX() < 0) {
-				ballX = 1;
-			}
-
-			if(ball.getY() < 0) {
-				ballY = 1;
-			}
+				if(ball.getX() < 0) {
+					ballX = 1;
+				}	
+				
+				if(ball.getY() < 0) {
+					ballY = 1;
+				}
+				
+				if(ball.getX() > APPLICATION_WIDTH) {
+					ballX = -1;
+				}
+				
+				if(ball.getY() > APPLICATION_HEIGHT) {
+					break;
+				}
 			
-			if(ball.getX() > APPLICATION_WIDTH) {
-				ballX = -1;
-			}
-			
-			if(ball.getY() > APPLICATION_HEIGHT) {
-				ballY = -1;
-			}
-			
-			if(ballBrick == paddle) {
-				ballY = ballY * -1;
-			} else if(ballBrick != ball && ballBrick != null) {
-				ballY = ballY * -1;
-				remove(ballBrick);
-			}
+				if(ballBrick == paddle) {
+					ballY = ballY * -1;
+				} else if(ballBrick != ball && ballBrick != null) {
+					ballY = ballY * -1;
+					remove(ballBrick);
+				}
 			
 			ball.move(ballX, ballY);
 			ballBrick = getElementAt(ball.getX(), ball.getY());
 			pause(5);
+			}
+			NTURNS--;
 		}
-		
 
 		
 
