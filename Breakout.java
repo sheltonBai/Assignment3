@@ -107,19 +107,19 @@ public class Breakout extends GraphicsProgram {
 		while(true){
 				
 			if(ball.getX() < 0) {
-				ballX = 2;
+				ballX = 10;
 			}
 
 			if(ball.getY() < 0) {
-				ballY = 2;
+				ballY = 10;
 			}
 			
 			if(ball.getX() > APPLICATION_WIDTH) {
-				ballX = -2;
+				ballX = -10;
 			}
 			
 			if(ball.getY() > APPLICATION_HEIGHT) {
-				ballY = -2;
+				ballY = -10;
 			}
 			
 			if(ballBrick == paddle) {
