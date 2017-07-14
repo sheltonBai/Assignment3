@@ -124,6 +124,9 @@ public class Breakout extends GraphicsProgram {
 			
 			if(ballBrick == paddle) {
 				ballY = ballY * -1;
+			} else {
+				ballY = ballY * -1;
+				remove(ballBrick);
 			}
 			
 			ball.move(ballX, ballY);
