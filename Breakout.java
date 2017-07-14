@@ -90,8 +90,8 @@ public class Breakout extends GraphicsProgram {
 		
 		ball.setFilled(true);
 		add(ball);
-		ballX = 10;
-		ballY = 10;
+		ballX = 1;
+		ballY = 1;
 		
 		//Creating the paddle
 		paddle = new GRect(APPLICATION_WIDTH / 2 - PADDLE_WIDTH / 2, APPLICATION_HEIGHT - (PADDLE_Y_OFFSET + PADDLE_HEIGHT), PADDLE_WIDTH, PADDLE_HEIGHT);
@@ -107,19 +107,19 @@ public class Breakout extends GraphicsProgram {
 		while(true){
 				
 			if(ball.getX() < 0) {
-				ballX = 10;
+				ballX = 1;
 			}
 
 			if(ball.getY() < 0) {
-				ballY = 10;
+				ballY = 1;
 			}
 			
 			if(ball.getX() > APPLICATION_WIDTH) {
-				ballX = -10;
+				ballX = -1;
 			}
 			
 			if(ball.getY() > APPLICATION_HEIGHT) {
-				ballY = -10;
+				ballY = -1;
 			}
 			
 			if(ballBrick == paddle) {
@@ -127,7 +127,7 @@ public class Breakout extends GraphicsProgram {
 			}
 			
 			ball.move(ballX, ballY);
-			pause(30);
+			pause(15);
 		}
 		
 
