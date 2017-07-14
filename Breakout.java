@@ -100,13 +100,14 @@ public class Breakout extends GraphicsProgram {
 		paddle.setFilled(true);
 		add(paddle);
 		
-		//Starting the game
-		waitForClick();
-		addMouseListeners();
+		
 		
 
 		//Moving the Ball
 		while(NTURNSLEFT != 0) {
+			//Starting the game
+			waitForClick();
+			addMouseListeners();
 			while(true) {
 				
 				if(ball.getX() < 0) {
