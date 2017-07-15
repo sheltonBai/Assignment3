@@ -153,10 +153,10 @@ public class Breakout extends GraphicsProgram {
 					ballY = ballY * -1;
 					remove(ballBrick);
 				}
-			
-			ball.move(ballX, ballY);
-			ballBrick = getElementAt(ball.getX(), ball.getY());
-			pause(50);
+				
+				ball.move(ballX, ballY);
+				ballBrick = getElementAt(ball.getX(), ball.getY());
+				pause(5);
 			}
 			NTURNSLEFT--;
 		}
