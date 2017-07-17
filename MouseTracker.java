@@ -15,4 +15,4 @@ label.setLabel("Mouse: (" + e.getX() + ", " + e.getY() + ")");
 }
 /* Private instance variable */
 private GLabel label;
-}
+} a epfjod sjoij aej9 
